@@ -11,14 +11,12 @@ use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/shame', methods: ["POST"])]
-class AddShameController extends AbstractController
+class AddShameAction extends AbstractController
 {
-    public function __construct(private readonly AddShame $handler) {
-    }
+    public function __construct(private readonly AddShame $handler) {}
 
     public function __invoke(#[MapRequestPayload] AddShamePayload $shamePayload): JsonResponse
     {
-        $shame = $this->handler->add($shamePayload);
-        return new JsonResponse($shame, 201);
+        return new JsonResponse($this->handler->add($shamePayload), 201);
     }
 }

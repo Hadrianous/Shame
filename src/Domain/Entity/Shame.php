@@ -19,10 +19,10 @@ class Shame
     #[Column(type: Types::TEXT, nullable: false)]
     private string $name;
 
-    #[Column(type: Types::TEXT, nullable: false)]
-    private string $status;
+    #[Column(nullable: false, enumType: Status::class)]
+    private Status $status;
 
-    public function __construct(string $name, string $status)
+    public function __construct(string $name, Status $status)
     {
         $this->name = $name;
         $this->status = $status;

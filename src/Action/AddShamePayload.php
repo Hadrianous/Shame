@@ -2,9 +2,16 @@
 
 namespace App\Action;
 
-class AddShamePayload
+use App\Domain\Entity\Status;
+use Symfony\Component\Validator\Constraints as Assert;
+
+final class AddShamePayload
 {
-    public function __construct(public readonly string $name, public readonly string $status)
-    {
+    public function __construct(
+        #[Assert\NotBlank()]
+        public readonly string $name,
+        #[Assert\NotBlank()]
+        public readonly Status $status
+    ){
     }
 }

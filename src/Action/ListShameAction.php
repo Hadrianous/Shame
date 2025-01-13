@@ -8,9 +8,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class ListShameController extends AbstractController
+class ListShameAction extends AbstractController
 {
-    #[Route('/list-shame')]
+    #[Route('/shame')]
     public function index(): Response
     {
         return $this->render('Shame/shame.html.twig');

@@ -27,4 +27,14 @@ class Shame
         $this->name = $name;
         $this->status = $status;
     }
+
+    public function getStatus(): Status
+    {
+        return $this->status;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
 }

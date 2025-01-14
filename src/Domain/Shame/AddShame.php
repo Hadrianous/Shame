@@ -15,7 +15,6 @@ class AddShame
         $shame = new Shame($payload->name, $payload->status);
         $this->entityManager->persist($shame);
         $this->entityManager->flush();
-
         return $shame;
     }
 }

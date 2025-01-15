@@ -1,0 +1,6 @@
+### Create a shame
+POST {{host}}/shame
+Content-Type: application/json
+
+{"name": "pipou", "status": "Assembling"}
+###

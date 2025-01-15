@@ -1,6 +1,13 @@
 ### Create a shame
 POST {{host}}/shame
 Content-Type: application/json
+Accept: application/json
 
 {"name": "pipou", "status": "Assembling"}
+
+> {%
+    client.test("Request executed", () => {
+        client.assert(response.status === 201);
+    })
+ %}
 ###

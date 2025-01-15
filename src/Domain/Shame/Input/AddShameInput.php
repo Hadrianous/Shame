@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Action;
+namespace App\Domain\Shame\Input;
 
 use App\Domain\Entity\Status;
 use Symfony\Component\Validator\Constraints as Assert;
 
-final class AddShamePayload
+final class AddShameInput
 {
     public function __construct(
         #[Assert\NotBlank()]

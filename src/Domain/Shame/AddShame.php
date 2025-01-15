@@ -2,8 +2,9 @@
 
 namespace App\Domain\Shame;
 
-use App\Action\AddShamePayload;
 use App\Domain\Entity\Shame;
+use App\Domain\Shame\Input\AddShameInput;
+use App\Domain\Shame\Output\AddShameOutput;
 use Doctrine\ORM\EntityManagerInterface;
 
 class AddShame
@@ -11,10 +12,10 @@ class AddShame
     public function __construct(private readonly EntityManagerInterface $entityManager) {
     }
 
-    public function add(AddShamePayload $payload): Shame {
+    public function add(AddShameInput $payload): AddShameOutput {
         $shame = new Shame($payload->name, $payload->status);
         $this->entityManager->persist($shame);
         $this->entityManager->flush();
-        return $shame;
+        return new AddShameOutput($shame);
     }
 }

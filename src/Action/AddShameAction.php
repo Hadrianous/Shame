@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Action;
 
 use App\Domain\Shame\AddShame;
+use App\Domain\Shame\Input\AddShameInput;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
@@ -16,7 +17,7 @@ class AddShameAction
 {
     public function __invoke(
         AddShame $handler,
-        #[MapRequestPayload] AddShamePayload $shamePayload
+        #[MapRequestPayload] AddShameInput $shamePayload
     ): JsonResponse {
         return new JsonResponse($handler->add($shamePayload), 201);
     }

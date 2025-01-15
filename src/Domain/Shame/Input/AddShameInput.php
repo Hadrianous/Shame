@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Domain\Shame\Input;
 
 use App\Domain\Entity\Status;

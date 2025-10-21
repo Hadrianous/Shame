@@ -11,3 +11,5 @@ Accept: application/json
     })
  %}
 ###
+GET {{host}}/shame
+Accept: application/json

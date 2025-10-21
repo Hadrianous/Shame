@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Shame\Input;
+namespace App\Shame\Domain\Input;
 
-use App\Domain\Entity\Status;
+use App\Shame\Domain\Entity\Status;
 use Symfony\Component\Validator\Constraints as Assert;
 
 final class AddShameInput

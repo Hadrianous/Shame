@@ -1,5 +1,5 @@
 init:
-	symfony console doctrine:schema:update --env=test --force
+	symfony console doctrine:schema:update --env=dev --force
 
 start:
 	symfony server:start

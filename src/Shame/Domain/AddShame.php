@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Shame;
+namespace App\Shame\Domain;
 
-use App\Domain\Entity\Shame;
-use App\Domain\Shame\Input\AddShameInput;
-use App\Domain\Shame\Output\AddShameOutput;
+use App\Shame\Domain\Entity\Shame;
+use App\Shame\Domain\Input\AddShameInput;
+use App\Shame\Domain\Output\AddShameOutput;
 use Doctrine\ORM\EntityManagerInterface;
 
 class AddShame

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Action;
+namespace App\Shame\Action;
 
-use App\Domain\Shame\AddShame;
-use App\Domain\Shame\Input\AddShameInput;
+use App\Shame\Domain\AddShame;
+use App\Shame\Domain\Input\AddShameInput;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;

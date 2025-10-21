@@ -1,5 +1,3 @@
-controllers:
-    resource:
-        path: ../src/Action/
-        namespace: App\Action
-    type: attribute
+shame:
+  resource: '../src/Shame/Action/'
+  type: attribute

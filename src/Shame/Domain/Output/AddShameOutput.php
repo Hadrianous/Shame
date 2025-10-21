@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Shame\Output;
+namespace App\Shame\Domain\Output;
 
-use App\Domain\Entity\Shame;
-use App\Domain\Entity\Status;
+use App\Shame\Domain\Entity\Shame;
+use App\Shame\Domain\Entity\Status;
 
 final class AddShameOutput
 {

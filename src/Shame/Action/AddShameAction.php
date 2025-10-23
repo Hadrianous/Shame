@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[AsController]
-#[Route('/shame', methods: ["POST"])]
+#[Route('/create-shame', methods: ["POST"])]
 class AddShameAction
 {
     public function __invoke(

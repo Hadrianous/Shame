@@ -1,5 +1,5 @@
 ### Create a shame
-POST {{host}}/shame
+POST {{host}}/create-shame
 Content-Type: application/json
 Accept: application/json
 
@@ -11,5 +11,11 @@ Accept: application/json
     })
  %}
 ###
-GET {{host}}/shame
+GET {{host}}/list-shame
 Accept: application/json
+
+> {%
+    client.test("Request executed", () => {
+        client.assert(response.status === 200);
+    })
+%}

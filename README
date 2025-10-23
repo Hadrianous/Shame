@@ -1,0 +1,7 @@
+Small project to handle my list of shame and paint list
+
+Use make init to prepare database
+
+make start to run local server
+
+make stop to stop local server

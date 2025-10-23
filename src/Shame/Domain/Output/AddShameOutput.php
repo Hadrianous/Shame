@@ -12,7 +12,7 @@ final class AddShameOutput
     public readonly Status $status;
     public readonly string $name;
 
-    public function __construct(Shame $shame,) {
+    public function __construct(Shame $shame) {
         $this->name = $shame->getName();
         $this->status = $shame->getStatus();
     }

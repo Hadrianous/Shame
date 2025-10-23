@@ -4,15 +4,22 @@ declare(strict_types=1);
 
 namespace App\Shame\Action;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Shame\Domain\GetAllShame;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Attribute\Route;
 
-class ListShameAction extends AbstractController
+#[AsController]
+#[Route('/list-shame', methods: ['GET'])]
+class ListShameAction
 {
-    #[Route('/shame')]
-    public function index(): Response
+    public function __invoke(
+        GetAllShame $getAllShame
+    ): Response
     {
-        return $this->render('Shame/shame.html.twig');
+        $shames = $getAllShame->execute();
+
+        return new JsonResponse($shames, Response::HTTP_OK);
     }
 }
